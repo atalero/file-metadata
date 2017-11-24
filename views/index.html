@@ -1,12 +1,3 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,12 +17,16 @@
     </header>
 
     <main>
-      <form>
-        <input type="text" maxlength="100" placeholder="Dreams!">
-        <button type="submit">Submit</button>
-      </form>
       <p class="bold">
         by <a href = "https://atalero.github.io/" target="blank">Andres Talero</a>
+      </p>
+      <form method="post" enctype="multipart/form-data" action="/upload">
+      <label for="doc"></label>
+      <input name="doc" type="file">
+      <input type="submit">  
+      </form>
+       <p>
+      View the source code on <a href="https://github.com/atalero/file-metadata"> GitHub</a>   
       </p>
     </main>
 
@@ -39,7 +34,6 @@
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
 
   </body>
 </html>
